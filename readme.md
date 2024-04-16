@@ -14,7 +14,7 @@ These instructions will get your copy of the project up and running on your loca
 ### Setup
 
 1. **Clone the repository:**
-   git clone https://github.com/tkius123/urlshortening.git
+   git clone https://github.com/brianhettiger-dev/urlshortening.git
    cd urlshortening
 2. **Build the project:**
 
@@ -70,7 +70,7 @@ This will execute all unit and integration tests in the project.
 
 ## Author
 
-- **Brian Hettiger** - *Initial work* - [tkius123](https://github.com/tkius123/yourusername)
+- **Brian Hettiger** - *Initial work* - [brianhettiger-dev](https://github.com/brianhettiger-dev/yourusername)
 
 
 

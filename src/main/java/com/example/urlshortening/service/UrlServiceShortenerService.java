@@ -7,11 +7,16 @@ import java.util.concurrent.ConcurrentHashMap;
 @Service
 public class UrlServiceShortenerService {
     private ConcurrentHashMap<String, String> urlMap = new ConcurrentHashMap<>();
+    private ConcurrentHashMap<String, String> orgUrlMap = new ConcurrentHashMap<>();
     private int id = 0;
 
     public String encode(String originalUrl) {
-        String shortUrl = "http://short.est/" + Integer.toHexString(id++);
+        String shortUrl = orgUrlMap.get(originalUrl);
+        if(shortUrl != null) return shortUrl;
+
+        shortUrl = "http://short.est/" + Integer.toHexString(id++);
         urlMap.put(shortUrl, originalUrl);
+        orgUrlMap.put(originalUrl, shortUrl);
         return shortUrl;
     }
 
